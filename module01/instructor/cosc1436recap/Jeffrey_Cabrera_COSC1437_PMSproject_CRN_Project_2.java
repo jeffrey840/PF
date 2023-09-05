@@ -18,8 +18,7 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
      */
     public static void main(String[] args) {
         boolean againStartLogin = false;
-        String[] templ = { "2023002", "Henry", "James", "13205", "Brown Rd.", "Magnolias", "CA", "68566", "5386493703",
-                "41488.00" };
+        String[] templ = { "2023002", "Henry", "James", "13205", "Brown Rd.", "Magnolias", "CA", "68566", "5386493703", "41488.00" };
         int colsInDatabase = indexTable(templ);
         // System.exit(0);
         String adminDatabase = "[root21,password123]\n[admin2,pass55]\n[cosc1436,pass65]\n";
@@ -231,8 +230,7 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
      * @param rows           The maximum number of people in the person database.
      * @param colsInDatabase
      */
-    private static void loginMenu(String[][] pDatabase, String adminDatabase, Scanner input, int rows,
-                                  int colsInDatabase) {
+    private static void loginMenu(String[][] pDatabase, String adminDatabase, Scanner input, int rows, int colsInDatabase) {
         int menuOptionLogin = -1;
         boolean goodLogin = false;
         System.out.println(" Login Menu ");

@@ -13,11 +13,11 @@ public class Person {
     private Integer zip;
     private Long phone;
     private Float salary;
-    private Date creationDate;
+    private Integer creationDate;
     private Boolean isMember;
     private String defaultPassword;
 
-    public Person(Long id, String fname, String lname, Short streetNo, String streetName, String city, String state, Integer zip, Long phone, Float salary, Date creationDate, Boolean isMember, String defaultPassword) {
+    public Person(Long id, String fname, String lname, Short streetNo, String streetName, String city, String state, Integer zip, Long phone, Float salary, Integer creationDate, Boolean isMember, String defaultPassword) {
         this.id = id;
         this.fname = fname;
         this.lname = lname;
@@ -113,11 +113,11 @@ public class Person {
         this.salary = salary;
     }
 
-    public Date getCreationDate() {
+    public Integer getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Date creationDate) {
+    public void setCreationDate(Integer creationDate) {
         this.creationDate = creationDate;
     }
 
