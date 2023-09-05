@@ -1,7 +1,8 @@
 package module01.instructor.cosc1436recap;
-        import java.util.Arrays;
-        import java.util.Random;
-        import java.util.Scanner;
+
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * This class handles the main functionalities for the Person Management System.
@@ -9,13 +10,8 @@ package module01.instructor.cosc1436recap;
  * and managing the login and sign-up operations.
  */
 
-public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
-    /**
-     * The main method of the Person Management System.
-     *
-     * @param args The command line arguments passed to the program (not used in
-     *             this application).
-     */
+public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
+
     public static void main(String[] args) {
         boolean againStartLogin = false;
         String[] templ = { "2023002", "Henry", "James", "13205", "Brown Rd.", "Magnolias", "CA", "68566", "5386493703", "41488.00" };
@@ -51,11 +47,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
         input.close();
     }
 
-    /**
-     * The indexTable method counts the number of non-empty strings in the given array.
-     * @param templ The array to analyze.
-     * @return The count of non-empty strings in the array.
-     */
 
     private static int indexTable(String[] templ) {
         int count = 0;
@@ -67,11 +58,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
         return count;
     }
 
-    /**
-     * Displays the introductory information of the Person Management System (PMS).
-     * This method prints out a welcome message along with the objectives, chapters,
-     * topics, functionalities, and developer information of the program.
-     */
     public static void introDisplay() {
         System.out.println("  =============================================== ");
         System.out.println("            Person Management System              ");
@@ -120,20 +106,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
         System.out.println("  ");
     }
 
-    /**
-     * Displays the SignUp Menu screen and allows the user to create an admin
-     * account. This method prompts the user to enter a username and password and
-     * adds the new admin account to the adminDatabase. It then verifies the admin
-     * account and grants access if the username and password match.
-     *
-     *
-     * The signUpMenu method provides a mechanism for the user to sign up
-     * and then verify their credentials against the provided database.
-     *
-     * @param adminDatabase The database containing admin usernames and passwords.
-     * @param input         The Scanner object used for user input.
-     * @return Returns true if the login is successful and false otherwise.
-     */
     private static boolean signUpMenu(String adminDatabase, Scanner input) {
         boolean goodLogin = false;
         String currentUser = "", currentPass = "";
@@ -170,20 +142,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
         return goodLogin;
     }
 
-    /**
-     * Verifies the admin's credentials by prompting them to enter their username
-     * and password. This method is used for admin login and checks if the provided
-     * username exists in the adminDatabase. If the username is found, it retrieves
-     * the corresponding password from the database and compares it with the
-     * provided password. If the password matches, the login is successful and the
-     * method returns true. If the username or password is incorrect, the method
-     * returns false.
-     *
-     * @param adminDatabase The database containing admin usernames and passwords.
-     * @param input         The Scanner object used for user input.
-     * @return true if the admin's credentials are verified and login is successful,
-     *         false otherwise.
-     */
     private static boolean loginScreen(String adminDatabase, Scanner input) {
         boolean goodLogin = false;
         String currentUser = "", currentPass = "";
@@ -216,20 +174,7 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
         return goodLogin;
     }
 
-    /**
-     * Displays the Login Menu screen and handles user login or signup based on the
-     * selected option. This method prompts the user to choose between signing up as
-     * an admin or logging in as an existing admin. If the user selects "SignUp
-     * Admin," it calls the signUpMenu method to create a new admin account. If the
-     * user selects "Login Admin," it calls the loginScreen method to verify the
-     * admin's credentials. If the user selects "Exit," the program terminates.
-     *
-     * @param pDatabase      The database containing person information.
-     * @param adminDatabase  The database containing admin usernames and passwords.
-     * @param input          The Scanner object used for user input.
-     * @param rows           The maximum number of people in the person database.
-     * @param colsInDatabase
-     */
+
     private static void loginMenu(String[][] pDatabase, String adminDatabase, Scanner input, int rows, int colsInDatabase) {
         int menuOptionLogin = -1;
         boolean goodLogin = false;
@@ -253,15 +198,7 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2 {
 
     }
 
-    /**
-     * Displays the main menu of the Person Management System (PMS) and handles user
-     * input to perform various operations.
-     *
-     * @param pDatabase      The database containing person records.
-     * @param input          The Scanner object used for user input.
-     * @param rows           The maximum number of rows in the database.
-     * @param colsInDatabase
-     */
+
     public static void mainMenu(String[][] pDatabase, Scanner input, int rows, int colsInDatabase) {
         int menuOptionMain;
         int menuOptionCreate;

@@ -11,13 +11,16 @@ public class PersonArray {
     }
 
     // Method to add a person
-    public boolean addPerson(Person person) {
+    public boolean addPerson(Person newPerson) {
         if (count < persons.length) {
-            persons[count] = person;
+            persons[count] = newPerson;
             count++;
-            return true; // successfully added
+            System.out.println("Person added to the database!");
+            return true;
+        } else {
+            System.out.println("Database is full. Cannot add more persons.");
+            return false;
         }
-        return false; // array is full
     }
 
     // Method to find a person by ID
