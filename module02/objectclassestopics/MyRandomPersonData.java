@@ -1,71 +1,91 @@
+
+
+
+
 package module02.objectclassestopics;
 
-import java.util.Date;
 import java.util.Random;
 
 public class MyRandomPersonData {
 
-    private static final Random random = new Random();
+    private static final Random RANDOM = new Random();
 
-    private static final String[] FIRST_NAMES = {"John", "Jane", "Sam", "Lucy", "Michael", "Sarah"};
-    private static final String[] LAST_NAMES = {"Smith", "Doe", "Johnson", "Williams", "Brown", "Jones"};
-    private static final String[] STREET_NAMES = {"Main St", "High St", "Park Ave", "Elm St", "2nd St"};
-    private static final String[] CITIES = {"New York", "Los Angeles", "Chicago", "Houston", "Phoenix"};
-    private static final String[] STATES = {"NY", "CA", "IL", "TX", "AZ"};
-
-    public static String getRandomFirstName() {
-        return FIRST_NAMES[random.nextInt(FIRST_NAMES.length)];
+    public static String randomFname() {
+        String[] FIRST_NAMES = {
+                "Emma", "Liam", "Olivia", "Noah", "Ava", "Isabella", "Sophia", "Mia",
+                "Charlotte", "Amelia", "Harper", "Evelyn", "Abigail", "Emily", "Elizabeth", "Sofia",
+                "Avery", "Ella", "Scarlett", "Grace", "Victoria", "Riley", "Aria", "Lily", "Aubrey",
+                "Zoey", "Penelope", "Hannah", "Layla", "Nora", "Lily", "Lillian", "Addison",
+                "Eleanor", "Natalie", "Ellie", "Leah", "Aubrey", "Hazel", "Violet", "Aurora",
+                "Savannah", "Audrey", "Brooklyn", "Bella", "Claire", "Skylar", "Lucy", "Paisley", "Everly"
+        };
+        int randomIndex = RANDOM.nextInt(FIRST_NAMES.length);
+        return FIRST_NAMES[randomIndex];
     }
 
-    public static String getRandomLastName() {
-        return LAST_NAMES[random.nextInt(LAST_NAMES.length)];
+    public static String randomLname() {
+        String[] LAST_NAMES = {
+                "Smith", "Johnson", "Brown", "Taylor", "Miller", "Jones", "Garcia", "Davis",
+                "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson",
+                "Thomas", "Taylor", "Moore", "Jackson", "Martin"
+                // ... Add more last names as needed
+        };
+        int randomIndex = RANDOM.nextInt(LAST_NAMES.length);
+        return LAST_NAMES[randomIndex];
     }
 
-    public static String getRandomStreetName() {
-        return STREET_NAMES[random.nextInt(STREET_NAMES.length)];
+    public static short randomNumber(long min, long max) {
+        return (short) (RANDOM.nextLong() % (max - min + 1) + min);
     }
 
-    public static short getRandomStreetNo() {
-        return (short) (random.nextInt(1000) + 1);
+    public static int randomNumber(int min, int max) {
+        return RANDOM.nextInt(max - min + 1) + min;
     }
 
-    public static String getRandomCity() {
-        return CITIES[random.nextInt(CITIES.length)];
+    public static short randomNumberShort(int min, int max) {
+        return (short) (RANDOM.nextInt(max - min + 1) + min);
     }
 
-    public static String getRandomState() {
-        return STATES[random.nextInt(STATES.length)];
+    public static String randomStreet() {
+        String[] STREET_TYPES = {
+                "St.", "Ave.", "Rd.", "Ln.", "Dr.", "Ct.", "Pl.", "Cir.", "Blvd.", "Way"
+        };
+        String[] STREET_NAMES = {
+                "Maple", "Oak", "Cedar", "Pine", "Elm", "Birch", "Willow", "Hickory",
+                "Ash", "Poplar", "Cherry", "Spruce", "Sycamore", "Cypress", "Alder",
+                "Dogwood", "Juniper", "Magnolia", "Redwood", "Fir"
+                // ... Add more street names as needed
+        };
+        int randomTypeIndex = RANDOM.nextInt(STREET_TYPES.length);
+        int randomNameIndex = RANDOM.nextInt(STREET_NAMES.length);
+        return STREET_NAMES[randomNameIndex] + " " + STREET_TYPES[randomTypeIndex];
     }
 
-    public static int getRandomZip() {
-        return random.nextInt(90000) + 10000;  // Zip codes from 10000 to 99999
+    public static String randomCity() {
+        String[] CITIES = {
+                "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio",
+                "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville", "San Francisco", "Columbus",
+                "Indianapolis", "Fort Worth", "Charlotte", "Seattle", "Denver", "Washington"
+                // ... Add more cities as needed
+        };
+        int randomIndex = RANDOM.nextInt(CITIES.length);
+        return CITIES[randomIndex];
     }
 
-    public static long getRandomPhone() {
-        return 1000000000L + random.nextInt(900000000);  // 10 digit phone number
+    public static String randomState() {
+        String[] STATES = {
+                "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
+                "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
+                "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",
+                "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
+                "New Hampshire", "New Jersey"
+                // ... Add more states as needed
+        };
+        int randomIndex = RANDOM.nextInt(STATES.length);
+        return STATES[randomIndex];
     }
 
-    public static float getRandomSalary() {
-        return random.nextFloat() * 100000;  // Salary between 0.00 to 100000.00
-    }
-
-    public static Date getRandomCreationDate() {
-        // Generate random dates in the last 10 years
-        long tenYearsInMillis = 10L * 365 * 24 * 60 * 60 * 1000;
-        return new Date(System.currentTimeMillis() - random.nextInt((int) tenYearsInMillis));
-    }
-
-    public static boolean getRandomIsMember() {
-        return random.nextBoolean();
-    }
-
-    public static String getRandomPassword() {
-        // Here, I'm generating a random 8 character password (simple example, might not be secure)
-        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        StringBuilder password = new StringBuilder();
-        for (int i = 0; i < 8; i++) {
-            password.append(chars.charAt(random.nextInt(chars.length())));
-        }
-        return password.toString();
+    public static Long randomBigNumber(long min, long max) {
+        return RANDOM.nextLong() % (max - min + 1) + min;
     }
 }

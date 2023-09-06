@@ -62,48 +62,7 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         System.out.println("  =============================================== ");
         System.out.println("            Person Management System              ");
         System.out.println("  =============================================== ");
-        System.out.println(" Welcome to Person Management System (PMS)! ");
-        System.out.println();
-        System.out.println(" This Program objectives are to manage, store, and");
-        System.out.println(" create various user\'s records of personal");
-        System.out.println(" information.");
-        System.out.println();
 
-        System.out.println(" .................................................");
-        System.out.println(" This Program chapters............................");
-        System.out.println("   - Chapter 1: Introduction to Computers, Programs, and Java");
-        System.out.println("   - Chapter 2: Elementary Programming");
-        System.out.println("   - Chapter 3: Selections");
-        System.out.println("   - Chapter 4: Mathematical Functions, Characters, and Strings");
-        System.out.println("   - Chapter 5: Loops");
-        System.out.println("   - Chapter 6: Methods");
-        System.out.println("   - Chapter 7: Single-Dimensional Arrays");
-        System.out.println("   - Chapter 8: Multidimensional Arrays");
-        System.out.println(" .................................................");
-        System.out.println();
-        System.out.println(" This Program topics include: if-else statements, ");
-        System.out.println(" Boolean values, declaring variables, new Scanner,");
-        System.out.println(" Println statements, numeric data types, reassigning");
-        System.out.println(" variables, time values, random values, switch");
-        System.out.println(" statements, reassigning variables, string formats,");
-        System.out.println(" concatenating data -----");
-        System.out.println();
-
-        System.out.println(" .................................................");
-        System.out.println(" This Program functionalities include: (1) Creating");
-        System.out.println(" a new person in the management system via an AUTO");
-        System.out.println(" option or NORMAL option, where the user is able to");
-        System.out.println(" manually input all of their personal information. ");
-        System.out.println(" We are also able to (2) Read a persons information,");
-        System.out.println(" (3) Update a persons information, (4) Delete a persons");
-        System.out.println(" information, or (5) Find a person.");
-        System.out.println(" ");
-
-        System.out.println(" .................................................");
-        System.out.println(" This Program developer....enter bio about developer..");
-        System.out.println(" ..............paragraph of bio......................");
-        System.out.println("  =============================================== ");
-        System.out.println("  ");
     }
 
     private static boolean signUpMenu(String adminDatabase, Scanner input) {
@@ -280,13 +239,7 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
 
     }
 
-    /**
-     * Reads the menu options available for manipulating person data and acts
-     * based on user choice. Options include displaying data arrays, summing
-     * all elements, and shuffling elements.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     */
+
     private static void readMenuOption(String[][] pDatabase) {
         System.out.println("Read Option Menu");
         System.out.println("1 - Displaying Arrays");
@@ -308,11 +261,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
 
     }
 
-    /**
-     * Shuffles the rows of the given 2D array in a random order.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     */
     private static void shuffleElements(String[][] pDatabase) {
         Random random = new Random();
         for (int r = pDatabase.length - 1; r > 0; r--) {
@@ -326,12 +274,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
 
     }
 
-    /**
-     * Calculates the total salary of all the persons in the database by
-     * iterating through each person's salary and adding them up.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     */
     private static void summingAllSalary(String[][] pDatabase) {
         double total = 0;
         for (int r = 0; r < pDatabase[0].length; r++) {
@@ -345,11 +287,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         System.out.printf("Total = $%,.2f\n", total);
     }
 
-    /**
-     * Prints the non-null elements of the 2D array pDatabase.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     */
     private static void printArr(String[][] pDatabase) {
 
         for (int i = 0; i < pDatabase.length; i++) {
@@ -365,15 +302,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         }
     }
 
-    /**
-     * Adds a new person represented by the newPerson array to the pDatabase 2D
-     * array.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     * @param newPerson The array representing the new person to be added.
-     //  @param input     The Scanner object for user input.
-     * @return The updated 2D array representing the database of persons.
-     */
     private static String[][] addPersonToDatabase(String[][] pDatabase, String[] newPerson) {
         int count = 0;
         for (int i = 0; i < pDatabase.length; i++) {
@@ -390,18 +318,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         return pDatabase;
     }
 
-//100 max people = null = in array
-    /**
-     * Generates random data for a new person and returns the person's information
-     * as a String array.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     * @param input     The Scanner object for user input.
-     * @return The String array representing the information of the new person in
-     *         the following order: [personID, personFirstName, personLastName,
-     *         personStreetNo, personStreetName, personCity, personState,
-     *         personZipCode, personPhone, personSalary]
-     */
     private static String[] autoCreatePerson(String[][] pDatabase, Scanner input) {
 
         String personFirstName = "null";
@@ -471,12 +387,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
 
     }
 
-    /**
-     * Computes a random index for the given array.
-     *
-     * @param arr The array for which a random index is desired.
-     * @return A random index within the bounds of the array.
-     */
     public static int ranArr(String[] arr) {
         double r = Math.random();
         int hi = arr.length - 1;
@@ -485,72 +395,37 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         return randomValue;
     }
 
-    /**
-     * Generates a random first name from a predefined list.
-     *
-     * @return A random first name.
-     */
     private static String randomFN() {
         String[] fnames = { "Sue", "Sara", "Toni", "Tyson", "Hannah", "Montana", "Vicky", "Becky", "Monica", "Henry",
                 "James", "Jason", "Emma", "Olivia", "Noah", "Liam", "Ava", "Isabella", "Sophia", "Mia" };
         return fnames[ranArr(fnames)];
     }
 
-    /**
-     * Generates a random last name from a predefined list.
-     *
-     * @return A random last name.
-     */
     private static String randomLN() {
         String[] lnames = { "Willis", "Ramos", "Wei", "Wu", "Smits", "Dickinson", "Johns", "Johnson", "Gomez", "Tyler",
                 "Nguyen", "Garcia", "Lee", "Martinez", "Brown", "Kim", "Rodriguez", "Chen", "Lopez", "Davis" };
         return lnames[ranArr(lnames)];
     }
 
-    /**
-     * Generates a random street name from a predefined list.
-     *
-     * @return A random street name.
-     */
+
     private static String randomSN() {
         String[] street = { "Main St.", "Wall Rd.", "West Ln.", "Fannin Rd.", "Westwood Ln.", "Apple St.", "Berry Ln.",
                 "Maple Ave.", "Cedar Dr.", "Oak St.", "Pine Rd.", "Elm Ln.", "Birch Way", "Cherry Ct.", "Hickory Rd." };
         return street[ranArr(street)];
     }
 
-    /**
-     * Generates a random city name from a predefined list.
-     *
-     * @return A random city name.
-     */
     private static String randomCI() {
         String[] city = { "Austin", "NYC", "SF", "Miami", "Ball City", "Hamford", "Turtleville", "Appleton", "Chicago",
                 "Los Angeles", "Seattle", "London", "Paris", "Tokyo", "Sydney", "Toronto", "Berlin", "Moscow" };
         return city[ranArr(city)];
     }
 
-    /**
-     * Generates a random state abbreviation from a predefined list.
-     *
-     * @return A random state abbreviation.
-     */
     private static String randomST() {
         String[] state = { "CA", "WY", "RI", "HI", "CO", "TX", "NY", "FL", "IL", "PA", "OH", "MI", "WA", "OR", "GA",
                 "AZ", "NC", "VA", "MA", "WI", "MN" };
         return state[ranArr(state)];
     }
 
-    /**
-     * Allows the user to input the information for a new person manually and
-     * returns the person's information as a String array.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     * @param input     The Scanner object for user input.
-     * @return The String array representing the information of the new person in
-     *         the following order: [personID, personFirstName, personLastName,
-     *         personStreetNo, personStreetName, personCity, personState,
-     *         personZipCode, personPhone, personSalary]
-     */
     private static String[] normalCreatePerson(String[][] pDatabase, Scanner input) {
 
         String personFirstName = "null";
@@ -621,25 +496,10 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
 
     }
 
-
-
-    /**
-     * Displays the information of all the people in the given database.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     */
     private static void readPeople(String[][] pDatabase) {
         printArr(pDatabase);
     }
 
-    /**
-     * Updates the information of a person in the database with the provided ID.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     * @param input     The Scanner object used to take user input.
-     * @return The updated 2D array representing the database after the person's
-     *         information has been updated.
-     */
     private static String[][] updatePerson(String[][] pDatabase, Scanner input) {
         String id = input.nextLine();
         boolean found = false;
@@ -690,15 +550,7 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         return updatedDatabase;
     }
 
-    /**
-     * Deletes a person with the provided ID from the database and returns the
-     * updated database.
-     *
-     * @param pDatabase The 2D array representing the database of persons.
-     * @param input     The Scanner object used to take user input.
-     * @return The updated 2D array representing the database after the person has
-     *         been deleted.
-     */
+
     private static String[][] deletePerson(String[][] pDatabase, Scanner input) {
 
         String id = input.nextLine();
@@ -735,11 +587,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         return updatedDatabase;
     }
 
-    /**
-     * Prints the information of a single person from the database.
-     *
-     * @param currentPerson An array containing the information of a single person.
-     */
     private static void printArr(String[] currentPerson) {
         for (int i = 0; i < currentPerson.length; i++) {
             String string = currentPerson[i];
@@ -749,11 +596,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
 
     }
 
-    /**
-     * Prints the information of a single person from the database.
-     *
-     //  * @param currentPerson An array containing the information of a single person.
-     */
     private static void findPerson(String[][] pDatabase, Scanner input) {
 
         String id = input.nextLine();
@@ -783,12 +625,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         }
     }
 
-    /**
-     * Retrieves the last ID number from the given database.
-     *
-     * @param pDatabase The database containing information about multiple persons.
-     * @return The last ID number found in the database.
-     */
     private static String getLastIdNumber(String[][] pDatabase) {
         String lastId = "23032001"; // Start with a default value
 
@@ -805,12 +641,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         return lastId;
     }
 
-    /**
-     * Counts the number of persons in the given database.
-     *
-     * @param pDatabase The database containing information about multiple persons.
-     * @return The number of persons present in the database.
-     */
     private static int countPersons(String[][] pDatabase) {
         int count = 0;
         for (String[] row : pDatabase) {
@@ -821,12 +651,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         return count;
     }
 
-    /**
-     * Bulk creates multiple persons and adds them to the database in batches.
-     *
-     * @param pDatabase The database to which the new persons will be added.
-     * @param input     The Scanner object to read user input.
-     */
     private static void bulkCreatePersons(String[][] pDatabase, Scanner input) {
         System.out.println("How many persons do you want to create?");
         int totalPersons = Integer.parseInt(input.nextLine());
@@ -848,17 +672,6 @@ public class Jeffrey_Cabrera_COSC1437_PMSproject_CRN_Project_2_copy {
         }
     }
 
-    /**
-     * Clears all the existing person data from the database by creating a new empty
-     * database.
-     *
-     * @param pDatabase      The database to be cleared.
-     * @param input          The Scanner object to read user input (not used in this
-     *                       method).
-     * @param rows           The maximum number of rows in the new database.
-     * @param colsInDatabase
-     * @return A new empty database with the same dimensions as the original.
-     */
     private static String[][] clearPersons(String[][] pDatabase, Scanner input, int rows, int colsInDatabase) {
 
         return new String[rows][colsInDatabase];

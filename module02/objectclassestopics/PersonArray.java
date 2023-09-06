@@ -1,71 +1,96 @@
+
+
+
 package module02.objectclassestopics;
 
 public class PersonArray {
+
     private Person[] persons;
-    private int count; // To keep track of the actual number of persons in the array
 
-    // Constructor
     public PersonArray(int size) {
-        this.persons = new Person[size];
-        this.count = 0;
+        persons = new Person[size];
     }
 
-    // Method to add a person
-    public boolean addPerson(Person newPerson) {
-        if (count < persons.length) {
-            persons[count] = newPerson;
-            count++;
-            System.out.println("Person added to the database!");
-            return true;
-        } else {
-            System.out.println("Database is full. Cannot add more persons.");
-            return false;
+    public PersonArray(Person[] p) {
+        persons = p;
+    }
+
+    public void setPerson(int index, Person person) {
+        index = index < 0 ? 0 : index;
+        index = index > persons.length - 1 ? persons.length - 1 : index;
+        if (index >= 0 && index < persons.length) {
+            persons[index] = person;
         }
     }
 
-    // Method to find a person by ID
-    private int findPersonById(Long id) {
-        for (int i = 0; i < count; i++) {
-            if (persons[i].getId().equals(id)) {
-                return i;
-            }
+    public Person getPersonByIndex(int index) {
+        if (index >= 0 && index < persons.length) {
+            return persons[index];
         }
-        return -1; // not found
+        return null;
     }
 
-    // Method to update a person's details (assumes Person class has setters)
-    public boolean updatePerson(Long id, Person updatedPerson) {
-        int index = findPersonById(id);
-        if (index != -1) {
-            persons[index] = updatedPerson; // Replaces the person at this index with updated details
-            return true; // successfully updated
-        }
-        return false; // person not found
-    }
-
-    // Method to delete a person by ID
-    public boolean deletePerson(Long id) {
-        int index = findPersonById(id);
-        if (index != -1) {
-            for (int i = index; i < count - 1; i++) {
-                persons[i] = persons[i + 1]; // Shift the subsequent persons back
-            }
-            persons[count - 1] = null; // Remove the last duplicate reference
-            count--; // Reduce the count
-            return true; // successfully deleted
-        }
-        return false; // person not found
-    }
-
-    // Method to display all persons
-    public void displayPersons() {
-        for (int i = 0; i < count; i++) {
-            System.out.println(persons[i].toString());
-        }
-    }
-
-    // Getter for size of the array (i.e., actual number of persons added)
     public int getSize() {
-        return count;
+        return persons.length;
+    }
+
+    public void displayAll() {
+        for (int i = 0; i < persons.length; i++) {
+            if (persons[i] != null) {
+                System.out.println("Person " + i + ":");
+                persons[i].display();
+            }
+        }
+    }
+
+    public void updateByPerson(Person person) {
+        for (int i = 0; i < persons.length; i++) {
+            if (persons[i] != null && persons[i].getId().equals(person.getId())) {
+                persons[i] = person;
+                return;
+            }
+        }
+    }
+
+    public void updateByPerson(Long id, Person updatedPerson) {
+        for (int i = 0; i < persons.length; i++) {
+            if (persons[i] != null && persons[i].getId().equals(id)) {
+                persons[i] = updatedPerson;
+                return;
+            }
+        }
+    }
+
+    public void deleteByPerson(Person person) {
+        for (int i = 0; i < persons.length; i++) {
+            if (persons[i] != null && persons[i].getId().equals(person.getId())) {
+                persons[i] = null;
+                return;
+            }
+        }
+    }
+
+    public void deleteByPerson(Long id) {
+        for (int i = 0; i < persons.length; i++) {
+            if (persons[i] != null && persons[i].getId().equals(id)) {
+                persons[i] = null;
+                return;
+            }
+        }
+    }
+
+    public void createBulkPersons(int num) {
+        num = num > 1 ? num : 1;
+        persons = new Person[num];
+        for (int i = 0; i < num; i++) {
+            persons[i] = new Person();
+        }
+    }
+
+    public void print() {
+        for (int i = 0; i < persons.length; i++) {
+            Person person = persons[i];
+            System.out.println(i + " : " + person.printPerson());
+        }
     }
 }
