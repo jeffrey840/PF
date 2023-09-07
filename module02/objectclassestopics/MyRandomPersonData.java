@@ -66,7 +66,7 @@ public class MyRandomPersonData {
                 "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio",
                 "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville", "San Francisco", "Columbus",
                 "Indianapolis", "Fort Worth", "Charlotte", "Seattle", "Denver", "Washington"
-                // ... Add more cities as needed
+
         };
         int randomIndex = RANDOM.nextInt(CITIES.length);
         return CITIES[randomIndex];
@@ -79,7 +79,7 @@ public class MyRandomPersonData {
                 "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",
                 "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
                 "New Hampshire", "New Jersey"
-                // ... Add more states as needed
+
         };
         int randomIndex = RANDOM.nextInt(STATES.length);
         return STATES[randomIndex];
