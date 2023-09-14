@@ -1,6 +1,24 @@
 package module02.objectclassestopics;
 
 
+/*
+
+random mps
+- myRandomAdminData
+- myRandomPersonData
+
+* */
+
+
+/*
+
+main
+- Main
+- PersonManager
+- stackOfPersons
+- TestStackOfPerson
+
+* */
 
 public class Main {
     public static void main(String[] args) {
