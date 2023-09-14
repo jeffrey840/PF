@@ -6,12 +6,18 @@ import java.util.Scanner;
 import models.Person;
 
 public class PersonManager {
+	// Initialize Scanner object for taking inputs from the user
 	static Scanner inpt=new Scanner(System.in);
 	public static void main(String[] args) {
+		// Generate a random maximum value between 100 and 5000
 		int max = (int) (Math.random() * (5000 - 100) + 100);
+		// Create a new StackOfPersons object with the above maximum size
 		StackOfPersons stack = new StackOfPersons(max);
+		// Preload the stack with random persons
 		bulkStackPersons(stack, max, "preLoad");
+		// Main loop to manage persons
 		while (true) {
+			// Display stack capacity and current count of persons in the stack
 			System.out.println("Max size of stack = " + stack.getCapacity());
 			int personCount = stack.getPersonCount();
 			System.out.println("Total number of persons: " + personCount);
@@ -26,9 +32,11 @@ public class PersonManager {
 			System.out.println("8. Clear");
 			System.out.println("9. Exit");
 			System.out.print("Enter your choice: ");
+			// Get user choice for various operations
 			String choiceString = inpt.nextLine();
 			int choice = Integer.parseInt(choiceString.charAt(0) + "");
 
+			// Switch case to handle user choices
 			switch (choice) {
 			case 1:
 
@@ -125,6 +133,7 @@ public class PersonManager {
 		}
 	}
 
+	// Method to bulk load random number of persons to the stack
 	private static void bulkStackPersons(StackOfPersons stack, int max, String pre) {
 
 		int num = new Random().nextInt(25, max);
@@ -137,6 +146,7 @@ public class PersonManager {
 		}
 	}
 
+	// Method to bulk load user-defined number of persons to the stack and return updated stack
 	private static StackOfPersons bulkStackPersons(StackOfPersons stk, int max) {
 		System.out.println("How many");
 		int num = Integer.parseInt(inpt.nextLine());
@@ -150,6 +160,7 @@ public class PersonManager {
 		return stk;
 	}
 
+	// Method to show update menu for selected person and update respective properties
 	private static Person updateMenu(Person foundPerson) {
 
 		System.out.println("1 - Change Name");
@@ -181,6 +192,7 @@ public class PersonManager {
 		return foundPerson;
 	}
 
+	// Method to update the name of the person
 	private static Person updateName(Person foundPerson) {
 
 		System.out.println("Enter new First Name");
@@ -197,6 +209,7 @@ public class PersonManager {
 		return p;
 	}
 
+	// Method to update the location of the person
 	private static Person updateLocation(Person foundPerson) {
 
 		System.out.println("Enter new Street No.");
@@ -226,6 +239,7 @@ public class PersonManager {
 		return p1;
 	}
 
+	// Method to update the phone number of the person
 	private static Person updatePhone(Person foundPerson) {
 		System.out.println("Enter new Phone No.");
 		Person p2 = foundPerson;
@@ -237,6 +251,7 @@ public class PersonManager {
 		return p2;
 	}
 
+	// Method to update the salary of the person
 	private static Person updateSalary(Person foundPerson) {
 		System.out.println("Enter new Salary");
 		Person p3 = foundPerson;
