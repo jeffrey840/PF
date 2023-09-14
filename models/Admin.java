@@ -1,6 +1,6 @@
 package models;
 
-import MyRandomAdminData;
+import randompms.MyRandomAdminData;
 
 public class Admin {
 

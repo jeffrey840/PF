@@ -1,90 +1,55 @@
-
-
-
 package randompms;
 
 import java.util.Random;
+import models.Person;
 
 public class MyRandomPersonData {
 
-    private static final Random RANDOM = new Random();
+    private static Random random = new Random();
+
+    public static String randomTitle() {
+        // Add more titles as desired
+        String[] titles = {"Mr.", "Ms.", "Mrs.", "Dr.", "Prof."};
+        return titles[random.nextInt(titles.length)];
+    }
 
     public static String randomFname() {
-        String[] FIRST_NAMES = {
-                "Emma", "Liam", "Olivia", "Noah", "Ava", "Isabella", "Sophia", "Mia",
-                "Charlotte", "Amelia", "Harper", "Evelyn", "Abigail", "Emily", "Elizabeth", "Sofia",
-                "Avery", "Ella", "Scarlett", "Grace", "Victoria", "Riley", "Aria", "Lily", "Aubrey",
-                "Zoey", "Penelope", "Hannah", "Layla", "Nora", "Lily", "Lillian", "Addison",
-                "Eleanor", "Natalie", "Ellie", "Leah", "Aubrey", "Hazel", "Violet", "Aurora",
-                "Savannah", "Audrey", "Brooklyn", "Bella", "Claire", "Skylar", "Lucy", "Paisley", "Everly"
-        };
-        int randomIndex = RANDOM.nextInt(FIRST_NAMES.length);
-        return FIRST_NAMES[randomIndex];
+        // Add more names as desired
+        String[] firstNames = {"John", "Jane", "Robert", "Anna", "Mike"};
+        return firstNames[random.nextInt(firstNames.length)];
     }
 
     public static String randomLname() {
-        String[] LAST_NAMES = {
-                "Smith", "Johnson", "Brown", "Taylor", "Miller", "Jones", "Garcia", "Davis",
-                "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson",
-                "Thomas", "Taylor", "Moore", "Jackson", "Martin"
-                // ... Add more last names as needed
-        };
-        int randomIndex = RANDOM.nextInt(LAST_NAMES.length);
-        return LAST_NAMES[randomIndex];
+        // Add more names as desired
+        String[] lastNames = {"Smith", "Doe", "Johnson", "Brown", "White"};
+        return lastNames[random.nextInt(lastNames.length)];
     }
 
-    public static short randomNumber(long min, long max) {
-        return (short) (RANDOM.nextLong() % (max - min + 1) + min);
-    }
-
-    public static int randomNumber(int min, int max) {
-        return RANDOM.nextInt(max - min + 1) + min;
-    }
-
-    public static short randomNumberShort(int min, int max) {
-        return (short) (RANDOM.nextInt(max - min + 1) + min);
+    public static long random(long min, long max) {
+        return min + (long)(random.nextDouble() * (max - min));
     }
 
     public static String randomStreet() {
-        String[] STREET_TYPES = {
-                "St.", "Ave.", "Rd.", "Ln.", "Dr.", "Ct.", "Pl.", "Cir.", "Blvd.", "Way"
-        };
-        String[] STREET_NAMES = {
-                "Maple", "Oak", "Cedar", "Pine", "Elm", "Birch", "Willow", "Hickory",
-                "Ash", "Poplar", "Cherry", "Spruce", "Sycamore", "Cypress", "Alder",
-                "Dogwood", "Juniper", "Magnolia", "Redwood", "Fir"
-                // ... Add more street names as needed
-        };
-        int randomTypeIndex = RANDOM.nextInt(STREET_TYPES.length);
-        int randomNameIndex = RANDOM.nextInt(STREET_NAMES.length);
-        return STREET_NAMES[randomNameIndex] + " " + STREET_TYPES[randomTypeIndex];
+        String[] streets = {"Main St.", "First Ave.", "Park Ave.", "Elm St.", "Broadway"};
+        return streets[random.nextInt(streets.length)];
     }
 
     public static String randomCity() {
-        String[] CITIES = {
-                "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio",
-                "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville", "San Francisco", "Columbus",
-                "Indianapolis", "Fort Worth", "Charlotte", "Seattle", "Denver", "Washington"
-
-        };
-        int randomIndex = RANDOM.nextInt(CITIES.length);
-        return CITIES[randomIndex];
+        String[] cities = {"New York", "Los Angeles", "Chicago", "Houston", "Phoenix"};
+        return cities[random.nextInt(cities.length)];
     }
 
     public static String randomState() {
-        String[] STATES = {
-                "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
-                "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
-                "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",
-                "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada",
-                "New Hampshire", "New Jersey"
-
-        };
-        int randomIndex = RANDOM.nextInt(STATES.length);
-        return STATES[randomIndex];
+        String[] states = {"NY", "CA", "IL", "TX", "AZ"};
+        return states[random.nextInt(states.length)];
     }
 
-    public static Long randomBigNumber(long min, long max) {
-        return RANDOM.nextLong() % (max - min + 1) + min;
+    // Method to generate an array of random people
+    public static Person[] randomNumPeople(int size) {
+        Person[] people = new Person[size];
+        for (int i = 0; i < size; i++) {
+            people[i] = new Person();  // Assuming you have a Person class with a default constructor
+        }
+        return people;
     }
 }

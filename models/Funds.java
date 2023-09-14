@@ -1,7 +1,7 @@
 package models;
  
 
-import MyRandomPersonData;
+import randompms.MyRandomPersonData;
 
 public class Funds {
 	
