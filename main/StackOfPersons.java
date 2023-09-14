@@ -1,6 +1,6 @@
-package module04.oop.main;
+package main;
 
-import module04.oop.models.Person;
+import models.Person;
 
 public class StackOfPersons {
 	private Person[] stack;

@@ -5,7 +5,6 @@ package module02.objectclassestopics;
 
 random mps
 - myRandomAdminData
-- myRandomPersonData
 
 * */
 

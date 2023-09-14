@@ -1,7 +1,7 @@
-package module04.oop.main; 
+package main;
 
-import module04.oop.models.Person;
-import module04.oop.randompms.MyRandomPersonData;
+import models.Person;
+import randompms.MyRandomPersonData;
 
 public class TestStackOfPersons {
     public static void main(String[] args) {

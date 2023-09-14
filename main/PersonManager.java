@@ -1,9 +1,9 @@
-package module04.oop.main;
+package main;
 
 import java.util.Random;
 import java.util.Scanner;
 
-import module04.oop.models.Person;
+import models.Person;
 
 public class PersonManager {
 	static Scanner inpt=new Scanner(System.in);

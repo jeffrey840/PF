@@ -1,7 +1,7 @@
-package module04.oop.models;
+package models;
  
 
-import module04.oop.randompms.MyRandomPersonData;
+import MyRandomPersonData;
 
 public class Funds {
 	

@@ -1,7 +1,7 @@
-package module04.oop.main;
+package main;
 
-import module04.oop.models.Admin;
-import module04.oop.models.Person;
+import models.Admin;
+import models.Person;
 
 /**
  * The Main class demonstrates the usage of the Person and Admin classes by generating and displaying their data.

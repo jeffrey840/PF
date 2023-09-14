@@ -1,4 +1,4 @@
-package module04.oop.models;
+package models;
 
 public class Person {
 

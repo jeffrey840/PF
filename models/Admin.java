@@ -1,6 +1,6 @@
-package module04.oop.models;
+package models;
 
-import module04.oop.randompms.MyRandomAdminData;
+import MyRandomAdminData;
 
 public class Admin {
 
