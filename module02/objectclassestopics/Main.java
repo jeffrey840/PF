@@ -10,16 +10,6 @@ random mps
 * */
 
 
-/*
-
-main
-- Main
-- PersonManager
-- stackOfPersons
-- TestStackOfPerson
-
-* */
-
 public class Main {
     public static void main(String[] args) {
         int fixedContainerSize = 50;
