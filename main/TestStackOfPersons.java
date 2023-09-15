@@ -3,6 +3,25 @@ package main;
 import models.Person;
 import randompms.MyRandomPersonData;
 
+/**
+ * The TestStackOfPersons class provides a testing environment to demonstrate the functionalities of the StackOfPersons class.
+ *
+ * Main Method:
+ * - main(String[] args): Demonstrates the following functionalities:
+ *   1. Generates an array of random Person objects using the MyRandomPersonData utility.
+ *   2. Initializes a StackOfPersons object and pushes all the generated Person objects onto the stack.
+ *   3. Demonstrates the peek functionality of the stack.
+ *   4. Creates a new Person object and pushes it onto the stack.
+ *   5. Prints all the Person objects currently in the stack.
+ *   6. Updates a Person object in the stack.
+ *   7. Deletes a Person object from the stack.
+ *   8. Pushes a bulk of Person objects onto the stack.
+ *   9. Searches for a Person object in the stack by their ID.
+ *
+ * This class serves as a test driver to showcase the operations and methods of the StackOfPersons class.
+ */
+
+
 public class TestStackOfPersons {
     public static void main(String[] args) {
         int size = 100;
