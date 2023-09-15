@@ -2,25 +2,21 @@ package models;
  
 import randompms.MyRandomPersonData;
 
-/*
-
-Explanation:
-
-Instance Variable: There's one private instance variable named phone of type Long, representing the phone number of the contact.
-
-Constructors:
-
-Default Constructor: This constructor initializes a Contact object with a random phone number generated using the MyRandomPersonData.random() method. The range for the phone number is between 214_111_1111L and 214_999_9999L. The Math.abs() ensures that the number is positive.
-Parameterized Constructor: Initializes a Contact object with the provided phone number.
-Getter and Setter Methods:
-
-getPhone(): Returns the phone number of the contact.
-setPhone(Long phone): Sets or updates the phone number of the contact.
-toString() Method: Overrides the default toString() method to provide a string representation of the Contact object. It's useful for printing or logging the state of the object.
-
-Miscellaneous: The code uses the super(); call in the constructors, which is a call to the parent class's constructor. Since Contact doesn't explicitly extend another class (other than implicitly extending Object), this call is redundant and can be safely removed.
-
-* */
+/**
+ * The Contact class represents a contact detail, specifically a phone number.
+ *
+ * Attributes:
+ * - phone: A unique phone number associated with the contact.
+ *
+ * Methods:
+ * - Contact(): Default constructor that initializes a Contact object with a random phone number sourced from MyRandomPersonData.
+ * - Contact(Long phone): Parameterized constructor that initializes a Contact object with the provided phone number.
+ * - getPhone(): Getter method that returns the phone number of the contact.
+ * - setPhone(Long phone): Setter method that allows for the setting or updating of the phone number.
+ * - toString(): Overrides the default toString() method to provide a string representation of the Contact object.
+ *
+ * This class provides a model for contact details, specifically focusing on phone numbers, and allows for the creation, modification, and representation of contact details.
+ */
 
 public class Contact {
 

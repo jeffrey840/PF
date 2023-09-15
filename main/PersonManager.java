@@ -5,6 +5,23 @@ import java.util.Scanner;
 
 import models.Person;
 
+/**
+ * The PersonManager class provides a comprehensive management system for a stack of persons.
+ *
+ * Methods:
+ * - main: Serves as the entry point of the application, presenting a menu to the user for various operations.
+ * - bulkStackPersons(StackOfPersons stack, int max, String pre): Bulk loads a random number of persons to the stack.
+ * - bulkStackPersons(StackOfPersons stk, int max): Bulk loads a user-defined number of persons to the stack and returns the updated stack.
+ * - updateMenu(Person foundPerson): Displays an update menu for a selected person and facilitates the update of their properties.
+ * - updateName(Person foundPerson): Updates the name of the selected person.
+ * - updateLocation(Person foundPerson): Updates the location details of the selected person.
+ * - updatePhone(Person foundPerson): Updates the phone number of the selected person.
+ * - updateSalary(Person foundPerson): Updates the salary of the selected person.
+ *
+ * The class provides functionalities such as adding, updating, deleting, searching, and displaying persons.
+ * Additionally, it supports bulk loading of persons and offers detailed update options for individual person attributes.
+ */
+
 public class PersonManager {
 	// Initialize Scanner object for taking inputs from the user
 	static Scanner inpt=new Scanner(System.in);

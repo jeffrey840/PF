@@ -2,6 +2,35 @@ package main;
 
 import models.Person;
 
+/**
+ * The StackOfPersons class models a stack structure specifically designed to manage Person objects.
+ *
+ * Attributes:
+ * - stack: An array used to store Person objects in a stack format.
+ * - top: A pointer indicating the topmost element in the stack.
+ * - capacity: The maximum number of elements the stack can hold.
+ *
+ * Methods:
+ * - StackOfPersons(): Default constructor that initializes the stack to a fixed size of 500.
+ * - StackOfPersons(int capacity): Parameterized constructor that initializes the stack based on the provided capacity.
+ * - StackOfPersons(Person[] stack): Constructor that initializes the stack from a provided array of Person objects.
+ * - getPersonCount(): Returns the current number of persons in the stack.
+ * - getCapacity(): Returns the total capacity of the stack.
+ * - push(Person person): Adds a new person onto the stack if there's space.
+ * - pop(): Removes and returns the topmost person from the stack if it's not empty.
+ * - peek(): Returns the topmost person without removing it, if the stack is not empty.
+ * - printAllPersons(): Prints all persons currently in the stack.
+ * - updatePerson(Person oldPerson, Person newPerson): Updates the details of a given person with new details.
+ * - deletePerson(Person person): Deletes a given person from the stack by shifting elements.
+ * - createBulkPersons(Person[] persons): Adds multiple persons onto the stack from a given array.
+ * - searchPersonById(long searchId): Searches for a person by their ID and returns the person if found.
+ * - setCapacity(int input): Updates the capacity of the stack.
+ * - clear(): Resets the stack by initializing a new stack with the existing capacity.
+ *
+ * This class provides a comprehensive stack management system for Person objects, including functionalities
+ * for adding, updating, deleting, and searching for persons, as well as other utility operations.
+ */
+
 // This class models a stack to manage Person objects.
 public class StackOfPersons {
 	private Person[] stack; // Array used to store Person objects in a stack

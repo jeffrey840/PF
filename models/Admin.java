@@ -2,22 +2,25 @@ package models;
 
 import randompms.MyRandomAdminData;
 
-/*
-
-Explanation:
-
-Instance Variables: Three private instance variables - id (type Long), user (type String representing username), and pass (type String representing password).
-
-Constructors:
-
-Parameterized constructor initializing an Admin object with given ID, username, and password.
-Copy constructor initializing an Admin object with another Admin object's attributes.
-Default constructor that utilizes a helper class MyRandomAdminData to generate and assign random attributes to an Admin object.
-Getter and Setter Methods: These methods provide access and modification capabilities for the private instance variables.
-
-toString() Method: This overridden method provides a string representation of the Admin object, useful for printing or logging.
-
-* */
+/**
+ * The Admin class represents an administrative user with attributes such as ID, username, and password.
+ *
+ * Attributes:
+ * - id: A unique identifier for the admin.
+ * - user: The username of the admin.
+ * - pass: The password of the admin.
+ *
+ * Methods:
+ * - Admin(Long id, String user, String pass): Constructor that initializes an Admin object with the provided ID, username, and password.
+ * - Admin(Admin admin): Copy constructor that creates a new Admin object based on another Admin object.
+ * - Admin(): Default constructor that initializes an Admin object with random data sourced from MyRandomAdminData.
+ * - getId() and setId(Long id): Getter and setter methods for the ID attribute.
+ * - getUser() and setUser(String user): Getter and setter methods for the username attribute.
+ * - getPass() and setPass(String pass): Getter and setter methods for the password attribute.
+ * - toString(): Overrides the default toString() method to provide a string representation of the Admin object.
+ *
+ * This class provides a model for administrative users, allowing for the creation, modification, and representation of admin details.
+ */
 
 public class Admin {
 

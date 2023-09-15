@@ -2,25 +2,32 @@ package models;
 
 import randompms.MyRandomPersonData;
 
-/*
-
-Explanation:
-
-Instance Variables: The class has six private instance variables representing various components of a location.
-
-Constructors:
-
-Default Constructor: Initializes the Location object with random values for street number, street name, city, state, and zip code. It then combines these attributes into a single string and computes a unique locationID based on the combined string's characters' ASCII values.
-Parameterized Constructor: Initializes the Location object with the provided values for street number, street name, city, state, and zip code, and then computes the locationID in the same way.
-charsDecimalValuesOfString(String input): This private method calculates a unique locationID by iterating through each character of the input string and summing up their ASCII values.
-
-Getter and Setter Methods: Standard methods to retrieve or modify the values of the instance variables.
-
-showZip() Method: Returns the zip code as a string with leading zeros (ensures it's 5 characters long).
-
-toString() Method: Overrides the default toString() method to provide a formatted string representation of the Location object.
-
-* */
+/**
+ * The Location class represents geographical details, including a location's unique ID, street number, name, city, state, and zip code.
+ *
+ * Attributes:
+ * - locationID: A unique identifier associated with a location.
+ * - streetNo: The street number.
+ * - streetName: The name of the street.
+ * - city: The city name.
+ * - state: The state name.
+ * - zip: The zip code.
+ *
+ * Methods:
+ * - Location(): Default constructor that initializes a Location object with random values for its attributes sourced from MyRandomPersonData.
+ * - Location(Short streetNo, String streetName, String city, String state, Integer zip): Parameterized constructor that initializes a Location object with the provided values and also calculates the locationID.
+ * - charsDecimalValuesOfString(String input): Private method to calculate locationID by summing up the ASCII values of characters in the input string.
+ * - getLocationID(), setLocationID(Long locationID): Getter and setter methods for locationID.
+ * - getStreetNo(), setStreetNo(Short streetNo): Getter and setter methods for street number.
+ * - getStreetName(), setStreetName(String streetName): Getter and setter methods for street name.
+ * - getCity(), setCity(String city): Getter and setter methods for city.
+ * - getState(), setState(String state): Getter and setter methods for state.
+ * - getZip(), setZip(Integer zip): Getter and setter methods for zip code.
+ * - showZip(): Private method to return zip code formatted with leading zeros.
+ * - toString(): Overrides the default toString() method to provide a string representation of the Location object.
+ *
+ * This class provides a model for geographical details, allowing for the creation, modification, and representation of location data.
+ */
 
 public class Location {
 	// Instance variables to represent a location's unique ID, street number, name, city, state, and zip code.

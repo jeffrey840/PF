@@ -3,29 +3,27 @@ package models;
 
 import randompms.MyRandomPersonData;
 
-/*
-
-Explanation:
-
-Instance Variables: The class has three private instance variables - bankID, salary, and currentBalance.
-
-Constructors:
-
-Default Constructor: This constructor initializes the Funds object with random values using the MyRandomPersonData class.
-Parameterized Constructor: This initializes the Funds object with values provided as parameters.
-Getter and Setter Methods: These are standard methods used to retrieve or modify the values of instance variables.
-
-currencies(Float c): This method takes a float value and returns it formatted as a currency string. It will also print the formatted value. The condition if (c > 999) checks whether the amount is greater than 999 and if so, uses a different format that includes commas.
-
-showCurrentBalance(): Returns the currentBalance instance variable formatted as a currency string.
-
-showSalary(): This is a private method, which means it can't be accessed outside the Funds class. It returns the salary instance variable formatted as a currency string.
-
-toString() Method: Overrides the default toString() method to provide a formatted string representation of the Funds object. This method is particularly useful for printing or logging.
-
-Miscellaneous: The constructors have the super(); call which refers to the parent class's constructor. Since Funds doesn't explicitly extend another class (other than implicitly extending Object), this call is redundant and can be safely removed.
-
-* */
+/**
+ * The Funds class represents financial details, including a bank ID, salary, and current balance.
+ *
+ * Attributes:
+ * - bankID: A unique identifier associated with a bank.
+ * - salary: The salary amount.
+ * - currentBalance: The current balance in the account.
+ *
+ * Methods:
+ * - Funds(): Default constructor that initializes a Funds object with random values for bank ID, salary, and current balance sourced from MyRandomPersonData.
+ * - Funds(Long bankID, Float salary, Float currentBalance): Parameterized constructor that initializes a Funds object with the provided values.
+ * - getBankID(), setBankID(Long bankID): Getter and setter methods for the bank ID.
+ * - getSalary(), setSalary(Float salary): Getter and setter methods for the salary.
+ * - getCurrentBalance(), setCurrentBalance(Float currentBalance): Getter and setter methods for the current balance.
+ * - currencies(Float c): Formats the input value 'c' as a currency, prints, and returns the formatted value.
+ * - showCurrentBalance(): Returns the current balance formatted as a currency string.
+ * - showSalary(): Returns the salary formatted as a currency string.
+ * - toString(): Overrides the default toString() method to provide a string representation of the Funds object.
+ *
+ * This class provides a model for financial details, allowing for the creation, modification, and representation of financial data.
+ */
 
 public class Funds {
 

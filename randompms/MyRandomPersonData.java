@@ -3,6 +3,25 @@ package randompms;
 import java.util.Random;
 import models.Person;
 
+/**
+ * The MyRandomPersonData class provides utility methods to generate random person-related data.
+ *
+ * Attributes:
+ * - random: An instance of the Random class to generate random values.
+ *
+ * Methods:
+ * - randomTitle(): Returns a random title (e.g., Mr., Ms., Dr.).
+ * - randomFname(): Returns a random first name.
+ * - randomLname(): Returns a random last name.
+ * - random(long min, long max): Returns a random long value between the specified min and max values.
+ * - randomStreet(): Returns a random street name.
+ * - randomCity(): Returns a random city name.
+ * - randomState(): Returns a random state abbreviation.
+ * - randomNumPeople(int size): Generates and returns an array of random Person objects of the specified size.
+ *
+ * This class is useful for simulating the creation of random person data, especially for testing or mock data generation purposes.
+ */
+
 public class MyRandomPersonData {
 
     private static Random random = new Random();
