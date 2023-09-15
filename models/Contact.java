@@ -2,6 +2,12 @@ package models;
  
 import randompms.MyRandomPersonData;
 
+/*
+package module04.oop.models;
+import module04.oop.randompms.MyRandomPersonData;
+
+* */
+
 /**
  * The Contact class represents a contact detail, specifically a phone number.
  *

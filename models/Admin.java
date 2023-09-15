@@ -2,6 +2,12 @@ package models;
 
 import randompms.MyRandomAdminData;
 
+/*
+package module04.oop.models;
+import module04.oop.randompms.MyRandomAdminData;
+import module04.oop.
+* */
+
 /**
  * The Admin class represents an administrative user with attributes such as ID, username, and password.
  *

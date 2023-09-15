@@ -5,6 +5,12 @@ import java.util.Scanner;
 
 import models.Person;
 
+/*
+package module04.oop.main;
+import module04.oop.models.Person;
+import module04.oop.
+* */
+
 /**
  * The PersonManager class provides a comprehensive management system for a stack of persons.
  *

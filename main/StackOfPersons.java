@@ -2,6 +2,12 @@ package main;
 
 import models.Person;
 
+/*
+package module04.oop.main;
+import module04.oop.models.Person;
+
+* */
+
 /**
  * The StackOfPersons class models a stack structure specifically designed to manage Person objects.
  *

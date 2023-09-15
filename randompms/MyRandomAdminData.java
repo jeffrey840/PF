@@ -4,6 +4,12 @@ import models.Admin;
 
 import java.util.Random;
 
+/*
+package module04.oop.randompms;
+import module04.oop.models.Admin;
+import module04.oop.java.util.Random;
+* */
+
 /**
  * The MyRandomAdminData class provides utility methods to generate random admin data.
  *

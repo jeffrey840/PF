@@ -1,5 +1,10 @@
 package models;
 
+/*
+package module04.oop.models;
+
+* */
+
 /**
  * The Person class represents an individual with various attributes such as ID, name, location, contact, and financial details.
  *

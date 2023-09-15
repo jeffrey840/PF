@@ -2,6 +2,12 @@ package models;
 
 import randompms.MyRandomPersonData;
 
+/*
+package module04.oop.models;
+import module04.oop.randompms.MyRandomPersonData;
+import module04.oop.
+* */
+
 /**
  * The Name class represents the full name details of a person, including title, first name, middle initial, and last name.
  *

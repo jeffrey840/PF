@@ -3,6 +3,11 @@ package randompms;
 import java.util.Random;
 import models.Person;
 
+/*
+package module04.oop.randompms;
+import module04.oop.models.Person;
+* */
+
 /**
  * The MyRandomPersonData class provides utility methods to generate random person-related data.
  *

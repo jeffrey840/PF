@@ -2,6 +2,12 @@ package models;
 
 import randompms.MyRandomPersonData;
 
+/*
+package module04.oop.models;
+import module04.oop.randompms.MyRandomPersonData;
+
+* */
+
 /**
  * The Location class represents geographical details, including a location's unique ID, street number, name, city, state, and zip code.
  *
