@@ -1,90 +1,123 @@
 package models;
 
-import randompms.MyRandomPersonData;
-
-/*
-package module04.oop.models;
-import module04.oop.randompms.MyRandomPersonData;
-import module04.oop.
-* */
+import module05.oop.randompms.MyRandomPersonData;
 
 /**
- * The Name class represents the full name details of a person, including title, first name, middle initial, and last name.
- *
- * Attributes:
- * - title: Represents the title of a person (e.g., Mr., Mrs.).
- * - fname: Represents the first name of a person.
- * - mi: Represents the middle initial of a person.
- * - lname: Represents the last name of a person.
- *
- * Methods:
- * - Name(): Default constructor that initializes a Name object with random values for title, first name, middle initial, and last name sourced from MyRandomPersonData.
- * - Name(String title, String fname, String mi, String lname, String other): Parameterized constructor that initializes a Name object with the provided values.
- * - getTitle(), setTitle(String title): Getter and setter methods for the title.
- * - getFname(), setFname(String fname): Getter and setter methods for the first name.
- * - getMi(), setMi(String mi): Getter and setter methods for the middle initial.
- * - getLname(), setLname(String lname): Getter and setter methods for the last name.
- * - toString(): Overrides the default toString() method to provide a string representation of the Name object.
- *
- * This class provides a model for name details, allowing for the creation, modification, and representation of full names.
+ * The `Name` class represents a person's name, including title, first name, middle initial, and last name.
  */
 public class Name {
+    private String title;
+    private String fname;
+    private String mi;
+    private String lname;
 
-	// Instance variables to represent the title (e.g., Mr., Mrs.), first name, middle initial, and last name of a person.
-	private String title;
-	private String fname;
-	private String mi;
-	private String lname;
-	// Default constructor that initializes the Name object with random values for its attributes.
-	public Name() {
-		super();
-		this.title = MyRandomPersonData.randomTitle();
-		this.fname = MyRandomPersonData.randomFname();
-		this.mi = MyRandomPersonData.randomFname();
-		this.lname = MyRandomPersonData.randomLname(); 
-	}
+    /**
+     * Constructs a `Name` object with randomly generated name components.
+     */
+    public Name() {
+        super();
+        this.title = MyRandomPersonData.randomTitle();
+        this.fname = MyRandomPersonData.randomFname();
+        this.mi = MyRandomPersonData.randomFname();
+        this.lname = MyRandomPersonData.randomLname();
+    }
 
-	// Parameterized constructor that initializes the Name object with provided values.
-	public Name(String title, String fname, String mi, String lname, String other) {
-		super();
-		this.title = title;
-		this.fname = fname;
-		this.mi = mi;
-		this.lname = lname; 
-	}
+    /**
+     * Constructs a `Name` object with the given name components.
+     *
+     * @param title The title (e.g., Mr., Mrs.).
+     * @param fname The first name.
+     * @param mi    The middle initial.
+     * @param lname The last name.
+     * @param other An unused parameter.
+     */
+    public Name(String title, String fname, String mi, String lname, String other) {
+        super();
+        this.title = title;
+        this.fname = fname;
+        this.mi = mi;
+        this.lname = lname;
+    }
 
-	// Getter and Setter methods for the title, first name, middle initial, and last name.
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public String getFname() {
-		return fname;
-	}
-	public void setFname(String fname) {
-		this.fname = fname;
-	}
-	public String getMi() {
-		return mi;
-	}
-	public void setMi(String mi) {
-		this.mi = mi;
-	}
-	public String getLname() {
-		return lname;
-	}
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
+    /**
+     * Gets the title of the name.
+     *
+     * @return The title.
+     */
+    public String getTitle() {
+        return title;
+    }
 
-	// Overrides the default toString() method to provide a string representation of the Name object.
-	@Override
-	public String toString() {
-		return " Name [title=" + title + ", fname=" + fname + ", mi=" + mi + ", lname=" + lname  + "]";
-	}
-	
-	
+    /**
+     * Sets the title of the name.
+     *
+     * @param title The title to set.
+     */
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    /**
+     * Gets the first name.
+     *
+     * @return The first name.
+     */
+    public String getFname() {
+        return fname;
+    }
+
+    /**
+     * Sets the first name.
+     *
+     * @param fname The first name to set.
+     */
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    /**
+     * Gets the middle initial.
+     *
+     * @return The middle initial.
+     */
+    public String getMi() {
+        return mi;
+    }
+
+    /**
+     * Sets the middle initial.
+     *
+     * @param mi The middle initial to set.
+     */
+    public void setMi(String mi) {
+        this.mi = mi;
+    }
+
+    /**
+     * Gets the last name.
+     *
+     * @return The last name.
+     */
+    public String getLname() {
+        return lname;
+    }
+
+    /**
+     * Sets the last name.
+     *
+     * @param lname The last name to set.
+     */
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    /**
+     * Returns a string representation of the `Name` object.
+     *
+     * @return A string containing title, first name, middle initial, and last name.
+     */
+    @Override
+    public String toString() {
+        return " Name [title=" + title + ", fname=" + fname + ", mi=" + mi + ", lname=" + lname + "]";
+    }
 }

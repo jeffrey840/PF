@@ -1,62 +1,57 @@
 package models;
- 
-import randompms.MyRandomPersonData;
 
-/*
-package module04.oop.models;
-import module04.oop.randompms.MyRandomPersonData;
-
-* */
+import module05.oop.randompms.MyRandomPersonData;
 
 /**
- * The Contact class represents a contact detail, specifically a phone number.
- *
- * Attributes:
- * - phone: A unique phone number associated with the contact.
- *
- * Methods:
- * - Contact(): Default constructor that initializes a Contact object with a random phone number sourced from MyRandomPersonData.
- * - Contact(Long phone): Parameterized constructor that initializes a Contact object with the provided phone number.
- * - getPhone(): Getter method that returns the phone number of the contact.
- * - setPhone(Long phone): Setter method that allows for the setting or updating of the phone number.
- * - toString(): Overrides the default toString() method to provide a string representation of the Contact object.
- *
- * This class provides a model for contact details, specifically focusing on phone numbers, and allows for the creation, modification, and representation of contact details.
+ * The `Contact` class represents a contact with a phone number.
  */
-
 public class Contact {
+    private Long phone;
 
-	// Instance variable representing the phone number of the contact
-	private Long phone;
+    /**
+     * Constructs a `Contact` object with a randomly generated phone number.
+     */
+    public Contact() {
+        super();
+        // Generate a random phone number in the range [2141111111, 2149999999]
+        this.phone = Math.abs(MyRandomPersonData.random(2141111111L, 2149999999L));
+    }
 
-	// Default constructor that initializes the Contact object with a random phone number
-	public Contact() {
-		super();
-		this.phone = Math.abs( MyRandomPersonData.random(214_111_1111L, 214_999_9999L));
-	}
+    /**
+     * Constructs a `Contact` object with the given phone number.
+     *
+     * @param phone The phone number to set for the contact.
+     */
+    public Contact(Long phone) {
+        super();
+        this.phone = phone;
+    }
 
-	// Parameterized constructor that initializes the Contact object with a provided phone number
-	public Contact(Long phone) {
-		super();
-		this.phone = phone;
-	}
+    /**
+     * Gets the phone number of the contact.
+     *
+     * @return The phone number of the contact.
+     */
+    public Long getPhone() {
+        return phone;
+    }
 
-	// Getter method for phone number
-	public Long getPhone() {
-		return phone;
-	}
+    /**
+     * Sets the phone number of the contact.
+     *
+     * @param phone The phone number to set for the contact.
+     */
+    public void setPhone(Long phone) {
+        this.phone = phone;
+    }
 
-	// Setter method to set/update the phone number
-	public void setPhone(Long phone) {
-		this.phone = phone;
-	}
-
-	// Overrides the default toString() method to provide a string representation of the Contact object
-	@Override
-	public String toString() {
-		return " Contact [phone=" + phone + "]";
-	}
-	
-	
-
+    /**
+     * Returns a string representation of the `Contact` object.
+     *
+     * @return A string containing the phone number of the contact.
+     */
+    @Override
+    public String toString() {
+        return " Contact [phone=" + phone + "]";
+    }
 }

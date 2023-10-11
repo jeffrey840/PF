@@ -1,106 +1,136 @@
 package models;
 
-/*
-package module04.oop.models;
-import module04.oop.randompms.MyRandomPersonData;
-
-* */
-
-import randompms.MyRandomPersonData;
+import module05.oop.randompms.MyRandomPersonData;
 
 /**
- * The Funds class represents financial details, including a bank ID, salary, and current balance.
- *
- * Attributes:
- * - bankID: A unique identifier associated with a bank.
- * - salary: The salary amount.
- * - currentBalance: The current balance in the account.
- *
- * Methods:
- * - Funds(): Default constructor that initializes a Funds object with random values for bank ID, salary, and current balance sourced from MyRandomPersonData.
- * - Funds(Long bankID, Float salary, Float currentBalance): Parameterized constructor that initializes a Funds object with the provided values.
- * - getBankID(), setBankID(Long bankID): Getter and setter methods for the bank ID.
- * - getSalary(), setSalary(Float salary): Getter and setter methods for the salary.
- * - getCurrentBalance(), setCurrentBalance(Float currentBalance): Getter and setter methods for the current balance.
- * - currencies(Float c): Formats the input value 'c' as a currency, prints, and returns the formatted value.
- * - showCurrentBalance(): Returns the current balance formatted as a currency string.
- * - showSalary(): Returns the salary formatted as a currency string.
- * - toString(): Overrides the default toString() method to provide a string representation of the Funds object.
- *
- * This class provides a model for financial details, allowing for the creation, modification, and representation of financial data.
+ * The `Funds` class represents financial information including bank ID, salary, and current balance.
  */
-
 public class Funds {
+    private Long bankID;
+    private Float salary;
+    private Float currentBalance;
 
-	// Instance variables representing a bank ID, salary, and the current balance of an account.
-	private Long bankID;
-	private Float salary;
-	private Float currentBalance;
+    /**
+     * Constructs a `Funds` object with randomly generated financial data.
+     */
+    public Funds() {
+        super();
+        // Generate a random bank ID in the range [955111111, 956999999]
+        this.bankID = Math.abs(MyRandomPersonData.random(955111111, 956999999));
+        // Generate a random salary in the range [55000, 175000]
+        this.salary = (float) Math.abs(MyRandomPersonData.random(55000, 175000));
+        // Generate a random current balance in the range [0.001, 1244]
+        this.currentBalance = (float) Math.abs(MyRandomPersonData.random(0.001, 1244));
+    }
 
-	// Default constructor initializes the Funds object with random values for bank ID, salary, and current balance.
-	public Funds() {
-		super();
-		this.bankID =Math.abs( MyRandomPersonData.random(955_111_111, 956_999_999));
-		this.salary = (float) Math.abs( MyRandomPersonData.random(55_000, 175_000));
-		this.currentBalance =(float) Math.abs( MyRandomPersonData.random(0_001, 1_244));
-	}
+    /**
+     * Constructs a `Funds` object with the given bank ID, salary, and current balance.
+     *
+     * @param bankID         The bank ID to set for the funds.
+     * @param salary         The salary to set for the funds.
+     * @param currentBalance The current balance to set for the funds.
+     */
+    public Funds(Long bankID, Float salary, Float currentBalance) {
+        super();
+        this.bankID = bankID;
+        this.salary = salary;
+        this.currentBalance = currentBalance;
+    }
 
-	// Parameterized constructor initializes the Funds object with provided values.
-	public Funds(Long bankID, Float salary, Float currentBalance) {
-		super();
-		this.bankID = bankID;
-		this.salary = salary;
-		this.currentBalance = currentBalance;
-	}
+    /**
+     * Gets the bank ID associated with the funds.
+     *
+     * @return The bank ID.
+     */
+    public Long getBankID() {
+        return bankID;
+    }
 
-	// Getter and Setter methods for the bank ID, salary, and current balance.
-	public Long getBankID() {
-		return bankID;
-	}
-	public void setBankID(Long bankID) {
-		this.bankID = bankID;
-	}
-	public Float getSalary() {
-		return salary;
-	}
-	public void setSalary(Float salary) {
-		this.salary = salary;
-	}
-	public Float getCurrentBalance() {
-		return currentBalance;
-	}
-	public void setCurrentBalance(Float currentBalance) {
-		this.currentBalance = currentBalance;
-	}
+    /**
+     * Sets the bank ID associated with the funds.
+     *
+     * @param bankID The bank ID to set.
+     */
+    public void setBankID(Long bankID) {
+        this.bankID = bankID;
+    }
 
-	// The method formats the input value 'c' as a currency, then prints and returns the formatted value.
-	public String currencies(Float c) {
-		String x="";
-		x= String.format("$ %.2f", c);
-		if(c>999)
-		x= String.format("$%,.2f", Float.parseFloat(x)); 
-		System.out.println(x);
-		return x;
-	}
-	// The method returns the current balance formatted as a currency string.
-	public String showCurrentBalance() {
-		String x="";
-		x = String.format("$ %.2f", currentBalance);
-		if(currentBalance>999) 
-			x = String.format("$ %,.2f", currentBalance);
-		return x;
-	}
-	// The method returns the salary formatted as a currency string.
-	private String showSalary() { 
-		return String.format("$ %,.2f", salary);
-	}
+    /**
+     * Gets the salary of the funds.
+     *
+     * @return The salary.
+     */
+    public Float getSalary() {
+        return salary;
+    }
 
-	// Overrides the default toString() method to provide a string representation of the Funds object.
-	@Override
-	public String toString() {
-		return " Funds [bankID = (" + bankID + "), salary = (" +showSalary()+ "), currentBalance = (" + showCurrentBalance()   + ") ] ";
-	}
-	
-	
+    /**
+     * Sets the salary of the funds.
+     *
+     * @param salary The salary to set.
+     */
+    public void setSalary(Float salary) {
+        this.salary = salary;
+    }
 
+    /**
+     * Gets the current balance of the funds.
+     *
+     * @return The current balance.
+     */
+    public Float getCurrentBalance() {
+        return currentBalance;
+    }
+
+    /**
+     * Sets the current balance of the funds.
+     *
+     * @param currentBalance The current balance to set.
+     */
+    public void setCurrentBalance(Float currentBalance) {
+        this.currentBalance = currentBalance;
+    }
+
+    /**
+     * Formats a currency value with commas for thousands.
+     *
+     * @param c The currency value to format.
+     * @return The formatted currency string.
+     */
+    public String currencies(Float c) {
+        String x = "";
+        x = String.format("$ %.2f", c);
+        if (c > 999)
+            x = String.format("$%,.2f", Float.parseFloat(x));
+        return x;
+    }
+
+    /**
+     * Formats the current balance as a currency string.
+     *
+     * @return The formatted current balance string.
+     */
+    public String showCurrentBalance() {
+        String x = "";
+        x = String.format("$ %.2f", currentBalance);
+        if (currentBalance > 999)
+            x = String.format("$ %,.2f", currentBalance);
+        return x;
+    }
+
+    // Private method to format salary as a currency string
+    private String showSalary() {
+        return String.format("$ %,.2f", salary);
+    }
+
+    /**
+     * Returns a string representation of the `Funds` object.
+     *
+     * @return A string containing bank ID, salary, and current balance.
+     */
+    @Override
+    public String toString() {
+        return " Funds [bankID = (" + bankID + "), salary = (" + showSalary() + "), currentBalance = ("
+                + showCurrentBalance() + ") ] ";
+    }
 }

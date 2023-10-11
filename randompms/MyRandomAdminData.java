@@ -1,40 +1,50 @@
 package randompms;
 
-import models.Admin;
-
-import java.util.Random;
-
-/*
-package module04.oop.randompms;
-import module04.oop.models.Admin;
-import module04.oop.java.util.Random;
-* */
-
+import module05.oop.models.Admin;
 /**
- * The MyRandomAdminData class provides utility methods to generate random admin data.
- *
- * Attributes:
- * - USERNAMES: An array of predefined usernames.
- * - PASSWORDS: An array of predefined passwords.
- * - random: An instance of the Random class to generate random values.
- *
- * Methods:
- * - generateRandomAdmin(): Generates and returns a random Admin object with a unique ID, random username, and password.
- *
- * This class is useful for simulating the creation of random admin accounts, especially for testing or mock data generation purposes.
+ * This class provides utility methods to generate random admin data.
  */
 public class MyRandomAdminData {
+	/**
+     * Generates a random Admin with a random ID, username, and password.
+     *
+     * @return Randomly generated Admin object.
+     */
+    public static Admin generateRandomAdmin() { 
+        return new Admin(generateRandomId(), generateRandomUsername(), generateRandomPassword());
+    }
 
-    private static final String[] USERNAMES = {"admin123", "root", "masteradmin", "superuser", "adminhero"};
-    private static final String[] PASSWORDS = {"password123", "adminpass", "rootpass", "secure123", "pass@123"};
-
-    private static Random random = new Random();
-
-    public static Admin generateRandomAdmin() {
-        Long id = Math.abs(random.nextLong());
-        String user = USERNAMES[random.nextInt(USERNAMES.length)];
-        String pass = PASSWORDS[random.nextInt(PASSWORDS.length)];
-
-        return new Admin(id, user, pass);
+    /**
+     * Generates a random ID for an Admin.
+     *
+     * @return Randomly generated ID.
+     */
+    private static Long generateRandomId() {
+        return Math.abs( MyRandomPersonData.random(5_111L, 5_999L));
+    } 
+    /**
+     * Generates a random username from a predefined array.
+     *
+     * @return Random username.
+     */
+    private static String generateRandomUsername() {
+        String[] users = {  "admin1", "admin2", "admin3", "admin4", "admin5" }; 
+        return users[new java.util.Random().nextInt(users.length)];
+    } 
+    /**
+     * Generates a random password composed of alphanumeric characters.
+     *
+     * @return Random password.
+     */
+    private static String generateRandomPassword() {
+        String PASSWORD_CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        StringBuilder password = new StringBuilder();
+        int length = 8; // Password length 
+        for (int i = 0; i < length; i++) { 
+            int randomIndex = (int) Math.abs( MyRandomPersonData.random(0, PASSWORD_CHARS.length()));
+            char randomChar = PASSWORD_CHARS.charAt(randomIndex);
+            password.append(randomChar);
+        } 
+        return password.toString();
     }
 }
